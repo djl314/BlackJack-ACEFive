@@ -9,7 +9,6 @@ from importer.StrategyImporter import StrategyImporter
 from module.Custom_Tracker import Tracker
 import module.PeaksTroughs as mPT
 import module.BJFunctions as mBJF
-#import module.Custom_Tracker as mTracker
 import DB.BJSQL as sql
 
 DEBUG_PRINT = 0 # Debug Print to Console 
@@ -33,9 +32,9 @@ else:
     #OUTPUT_DETAILS_FILE = os.path.join(DESKTOP, "exports/00000_BJ_DETAILS.csv")
     OUTPUT_DETAILS_FILE = "exports/00000_BJ_DETAILS.csv"
 
-SIMULATIONS = 2 #Simulation ends when # Shoes is reached OR Player_Bank <=BANK_RUIN OR def GetBL_WA() WALKAWAY returns True
-SHOES = 1 #No. of shoes(games) to simulate in each simulation
-SHOE_SIZE = 6 # No. of Decks per shoe
+SIMULATIONS = 5 #Simulation ends when # Shoes is reached OR Player_Bank <=BANK_RUIN OR def GetBL_WA() WALKAWAY returns True
+SHOES = 12 #No. of shoes(games) to simulate in each simulation
+SHOE_SIZE = 5 # No. of Decks per shoe
 SHOE_PENETRATION = 0.25 # Remaining % of cards before shuffle 
 
 #////////// Global Settings and Constants accross Each Simulaton \\\\\\\\\\\\\
@@ -70,7 +69,7 @@ MAXLOSS_DEV = -1 # 20 #Set as percent of starting bank - when bank < X% increase
 MAXLOSS_DEV_OFF = 2000 # amount of Profit to disable MAXLOSS_DEV and return BM back to 1
 BET_MULTIPLIER_FACTOR = 2 # 2= double / when MAXLOSS_DEV active - multiplies wager by factor
 
-# //// WAVES EXPERIMENTAL - Not in use \\\\
+#TODO //// WAVES EXPERIMENTAL - Not in use \\\\
 ##//// ERROR: no such column: nan - Set HH to a lower value - occurs when PL range is too small or # shoes too little \\\\##
 HH = BET_MINIMUM * 10 # 1000 #min Height for measuring up/down waves - Lower value if errors occur
 HAND_STREAK = 1 #180 # ~ 3 shoes(180) | hands played to determine loss velocity for STD_DEV Waves and Increasing Bet by BET_MULTIPLIER_FACTOR| set to 1 to disable 

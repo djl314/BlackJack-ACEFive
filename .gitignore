@@ -1,8 +1,9 @@
-
+.gitignore
 *.zip
 CasinoTotals.xls
 CasinoTotals.xlsx
 /private
+/exports
 *.db
 *.csv
 DEV.md
