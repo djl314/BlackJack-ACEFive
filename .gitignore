@@ -1,0 +1,8 @@
+
+*.zip
+CasinoTotals.xls
+CasinoTotals.xlsx
+/private
+*.db
+*.csv
+DEV.md
