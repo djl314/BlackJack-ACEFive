@@ -23,7 +23,7 @@ Class definitions:
 * *Master* stores data and metrics across all Game(s)
 * *Tracker* allows custom scripting to measure data points set by user
 
-### Output 
+### Example of User Set Variables / Global Configuration
 | Variable        | Description         |
 | ------------- |-------------|
 | *DEBUG_PRINT* | Prints to console details of every hand
@@ -31,9 +31,6 @@ Class definitions:
 | *CSV_DETAILS* | Export hand DETAILS to CSV  use exported file in PLAY_FROM_FILE option 
 | *DETAIL_SUMMARY* | Prints to console additional details about each simulation 
 | *DB_ENABLE* | Insert results to SQLlite3 DB
-
-### Example of User Set Variables / configuration
-
 | SIMULATIONS = 5 | #Simulation ends when # Shoes is reached OR Player_Bank <=BANK_RUIN OR def GetBL_WA() WALKAWAY returns True
 | SHOES = 12 | #No. of shoes(games) to simulate in each simulation
 | SHOE_SIZE = 5 | # No. of Decks per shoe
@@ -95,31 +92,31 @@ Strategy is passed into the simulator as a .csv file.
 
 ####### SIMULATION no. 1 ########<br>
 PnL: $ 975.00 -- FINAL Bank: 10975.00<br>
-Max Bank: $11325 at 109 | Min Bank: $8875 at 73
-Range: $2450 | Max Loss: $1125
-Avg bet/hnd: 155.88  Total bets: 18550.00
+Max Bank: $11325 at 109 | Min Bank: $8875 at 73<br>
+Range: $2450 | Max Loss: $1125<br>
+Avg bet/hnd: 155.88  Total bets: 18550.00<br>
+<br>
+House Edge: -5.882<br>
+Actual Edge: 8.193<br>
+Win Rate: 12.771<br>
+win/bet = 5.256 %)<br>
+Theo PnL: $ 1091.16<br>
+Casino Exp Loss: $ -185.50<br>
+<br>
+######## SIMULATION no. 2 ########<br>
+PnL: $ -775.00 -- FINAL Bank: 9225.00<br>
+Max Bank: $11100 at 63 | Min Bank: $8125 at 37<br>
+Range: $2975 | Max Loss: $1875<br>
+Avg bet/hnd: 149.19  Total bets: 18350.00<br>
+<br>
+House Edge: 8.943<br>
+Actual Edge: -6.301<br>
+Win Rate: -9.400<br>
+win/bet = -4.223 %)<br>
+Theo PnL: $ -1641.09<br>
+Casino Exp Loss: $ -183.50<br>
 
-House Edge: -5.882
-Actual Edge: 8.193
-Win Rate: 12.771
-win/bet = 5.256 %)
-Theo PnL: $ 1091.16
-Casino Exp Loss: $ -185.50
-
-######## SIMULATION no. 2 ########
-PnL: $ -775.00 -- FINAL Bank: 9225.00
-Max Bank: $11100 at 63 | Min Bank: $8125 at 37
-Range: $2975 | Max Loss: $1875
-Avg bet/hnd: 149.19  Total bets: 18350.00
-
-House Edge: 8.943
-Actual Edge: -6.301
-Win Rate: -9.400
-win/bet = -4.223 %)
-Theo PnL: $ -1641.09
-Casino Exp Loss: $ -183.50
-
-<<<SUMMARY OF 2 SIMULATIONS>>>
-Total Hands : 242
-WalkAways: 0.0 Reason:WinStreak 0, Profit 0, TrailStop 0, Cutloss 0, RUIN 0 
-TotPL: $ 200.00  WA_PnL: $ 200.00 
+<<<SUMMARY OF 2 SIMULATIONS>>><br>
+Total Hands : 242<br>
+WalkAways: 0.0 Reason:WinStreak 0, Profit 0, TrailStop 0, Cutloss 0, RUIN 0 <br>
+TotPL: $ 200.00  WA_PnL: $ 200.00 <br>
