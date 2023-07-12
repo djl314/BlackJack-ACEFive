@@ -34,32 +34,32 @@ Class definitions:
 
 ### Example of User Set Variables / configuration
 
-SIMULATIONS = 5 #Simulation ends when # Shoes is reached OR Player_Bank <=BANK_RUIN OR def GetBL_WA() WALKAWAY returns True
-SHOES = 12 #No. of shoes(games) to simulate in each simulation
-SHOE_SIZE = 5 # No. of Decks per shoe
-SHOE_PENETRATION = 0.25 # Remaining % of cards before shuffle 
+| SIMULATIONS = 5 | #Simulation ends when # Shoes is reached OR Player_Bank <=BANK_RUIN OR def GetBL_WA() WALKAWAY returns True
+| SHOES = 12 | #No. of shoes(games) to simulate in each simulation
+| SHOE_SIZE = 5 | # No. of Decks per shoe
+| SHOE_PENETRATION = 0.25 | # Remaining % of cards before shuffle 
 
-NO_HANDS = 2 # No of hands(players) played each round | Set to any # of hands 1 or higher
-BET_MINIMUM = 100  # Minimum Bet / hand -- MIN Bet over all hands should be 1-2 % of bank to avoid Ruin --
-BET_INCREMENT = 50 # Progressive Bets - Increment wager after each win | set to 0 to disable Progressive betting
-USE212 = False # Modified Progressive 
-BET_MAX =  BET_MINIMUM * 15 #1500 #Max amount to bet on any one hand (pre split/double)
-RESET_BETS = True # Reset Bets to BET_MIN and Streaks after each shoe
-EXPECTED_LOSS_RATE = 1 # In percent / divided by 100 at execution | Casino Expected Loss  Theo Loss / For Comps
+| NO_HANDS = 2 | # No of hands(players) played each round | Set to any # of hands 1 or higher
+| BET_MINIMUM = 100  | # Minimum Bet / hand -- MIN Bet over all hands should be 1-2 % of bank to avoid Ruin --
+| BET_INCREMENT = 50 | # Progressive Bets - Increment wager after each win | set to 0 to disable Progressive betting
+| USE212 = False | # Modified Progressive 
+| BET_MAX =  BET_MINIMUM * 15 | #1500 #Max amount to bet on any one hand (pre split/double)
+| RESET_BETS = True|  # Reset Bets to BET_MIN and Streaks after each shoe
+| EXPECTED_LOSS_RATE = 1 | # In percent / divided by 100 at execution | Casino Expected Loss  Theo Loss / For Comps
 
-BANK_START = 10000 # Player Bank
-BANK_RUIN =  0 #0 # bank amount below for RUIN
-WA_ON_STREAK = 6 # 0 to disable | Times player reaches WIN_STREAK to trigger automatic WALK_AWAY (WA) | uses CT_Streak[WIN_STREAK[1]] to count
-WALK_AWAY =  4000 #BET_MINIMUM * NO_HANDS * 10 # PL before Ending Game = WA walkaway
-WALK_AWAY_TRIGGER =  12000 #used in conjunction with TRAILING_STOP
-TRAILING_STOP = 0 # % of PL to use as trailing stop once WALK_AWAY_TRIGGER is reached when PL is positve | set to 0 to disable
-LOSS_STOP = 0 #trailing amount from PlrBnk MIN to earn in event of WA Cut Losses | set to 0 to disable
-LOSS_TRIGGER = 2500 # Loss trigger point overrides LOSS_STOP to WA if PL is back to >= 0 after falling below LossTrigger | LOSS_STOP must be > 0 to enable this feature
-WALK_AWAY_BREAK = False # True # SET TO TRUE TO BREAK SIMULATION ON WALK AWAY - if False, simulation runs ALL shoes regardless of player PL or WalkAway logic(but tracks PL independently)
+| BANK_START = 10000 | # Player Bank
+| BANK_RUIN =  0 | #0 # bank amount below for RUIN
+| WA_ON_STREAK = 6 | # 0 to disable | Times player reaches WIN_STREAK to trigger automatic WALK_AWAY (WA) | uses CT_Streak[WIN_STREAK[1]] to count
+| WALK_AWAY =  4000 | #BET_MINIMUM * NO_HANDS * 10 # PL before Ending Game = WA walkaway
+| WALK_AWAY_TRIGGER =  12000 | #used in conjunction with TRAILING_STOP
+| TRAILING_STOP = 0 | # % of PL to use as trailing stop once WALK_AWAY_TRIGGER is reached when PL is positve | set to 0 to disable
+| LOSS_STOP = 0 | #trailing amount from PlrBnk MIN to earn in event of WA Cut Losses | set to 0 to disable
+| LOSS_TRIGGER = 2500 | # Loss trigger point overrides LOSS_STOP to WA if PL is back to >= 0 after falling below LossTrigger | LOSS_STOP must be > 0 to enable this feature
+| WALK_AWAY_BREAK = False | # True # SET TO TRUE TO BREAK SIMULATION ON WALK AWAY - if False, simulation runs ALL shoes regardless of player PL or WalkAway logic(but tracks PL independently)
 
-WIN_STREAK = [5,5,5]  # [neg count,neutral count, pos count]- dflt WIN_STREAK[1]| when progessive betting the number of consecutive hands to win before resetting to BET_MINIMUM |use inconjunction with COUNT_TIER[0] 
-MAX_WIN_STREAK = 7 # MAXIMUM # of wins streak before lowering bet / #setting bet to minimum / overrides other streak settings
-WIN_STREAK_RESET = False # Reset progressive after streak is reached - eg. if true hand is no. 7 bet as if 2nd win, etc | when false after win streak consecutive wins are BET_MIN until a loss
+| WIN_STREAK = [5,5,5]  | # [neg count,neutral count, pos count]- dflt WIN_STREAK[1]| when progessive betting the number of consecutive hands to win before resetting to BET_MINIMUM |use inconjunction with COUNT_TIER[0] 
+| MAX_WIN_STREAK = 7 # MAXIMUM | # of wins streak before lowering bet / #setting bet to minimum / overrides other streak settings
+| WIN_STREAK_RESET = False | # Reset progressive after streak is reached - eg. if true hand is no. 7 bet as if 2nd win, etc | when false after win streak consecutive wins are BET_MIN until a loss
 
 
 ### HOUSE_RULES
@@ -93,8 +93,8 @@ Strategy is passed into the simulator as a .csv file.
 
 ### Sample Output (short summary)
 
-####### SIMULATION no. 1 ########
-PnL: $ 975.00 -- FINAL Bank: 10975.00
+####### SIMULATION no. 1 ########<br>
+PnL: $ 975.00 -- FINAL Bank: 10975.00<br>
 Max Bank: $11325 at 109 | Min Bank: $8875 at 73
 Range: $2450 | Max Loss: $1125
 Avg bet/hnd: 155.88  Total bets: 18550.00
