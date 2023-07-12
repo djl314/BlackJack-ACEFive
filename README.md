@@ -1,7 +1,7 @@
 BlackJack-ACEFive | Card Counting | Betting Strategies | Custom Scripting
 ==============================================
 The Simulator takes a given basic strategy(BS) as input (defined in a .csv-file) and simulates the win/loss against a random shoe with user entered number of decks.   Custom Scripting, Card Counting, Progressive Betting, ACEFive, Real-Life "Walk Away" scenarios.
-Using the Custom Scripting Tracker you can measure any data metric - Example - What happens to the House Edge when player exceeds standard deviation of maximum expected loss over a fixed number of hands/shoes 
+<br>Using the Custom Scripting Tracker you can measure any data metric - Example - What happens to the House Edge when player exceeds standard deviation of maximum expected loss over a fixed number of hands/shoes 
 Capable of Tracking Card counts in ALL possible card counting strategies | Winn and Loss Streaks | House Edge vs Actual Edge | Load from file the same set of hands using different betting strategies and measure the differences
 Simulates REAL LIFE playing environment - user can define a "WALK_AWAY" logic to end the simulation
 
